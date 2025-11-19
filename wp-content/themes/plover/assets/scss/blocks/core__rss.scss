@@ -1,0 +1,20 @@
+@use "../base-styles/mixins" as mixins;
+
+ul.wp-block-rss {
+
+  @include mixins.break-small {
+    @for $i from 2 through 6 {
+      &.columns-#{ $i } li {
+        width: 100%;
+      }
+    }
+  }
+
+  @include mixins.break-medium {
+    @for $i from 2 through 6 {
+      &.columns-#{ $i } li {
+        width: calc((100% / #{ $i }) - 1em);
+      }
+    }
+  }
+}

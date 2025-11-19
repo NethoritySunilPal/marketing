@@ -1,0 +1,59 @@
+@use "breakpoints" as breakpoints;
+
+/**
+ * Breakpoint mixins
+ */
+
+@mixin break-xhuge() {
+  @media (min-width: #{ (breakpoints.$break-xhuge) }) {
+    @content;
+  }
+}
+
+@mixin break-huge() {
+  @media (min-width: #{ (breakpoints.$break-huge) }) {
+    @content;
+  }
+}
+
+@mixin break-wide() {
+  @media (min-width: #{ (breakpoints.$break-wide) }) {
+    @content;
+  }
+}
+
+@mixin break-xlarge() {
+  @media (min-width: #{ (breakpoints.$break-xlarge) }) {
+    @content;
+  }
+}
+
+@mixin break-large() {
+  @media (min-width: #{ (breakpoints.$break-large) }) {
+    @content;
+  }
+}
+
+@mixin break-medium() {
+  @media (min-width: #{ (breakpoints.$break-medium) }) {
+    @content;
+  }
+}
+
+@mixin break-small() {
+  @media (min-width: #{ (breakpoints.$break-small) }) {
+    @content;
+  }
+}
+
+@mixin break-mobile() {
+  @media (min-width: #{ (breakpoints.$break-mobile) }) {
+    @content;
+  }
+}
+
+@mixin break-zoomed-in() {
+  @media (min-width: #{ (breakpoints.$break-zoomed-in) }) {
+    @content;
+  }
+}

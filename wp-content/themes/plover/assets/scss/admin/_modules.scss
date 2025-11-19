@@ -1,0 +1,82 @@
+@use "vars" as vars;
+
+.plover-dashboard-wrap .plover-dashboard-plugin-modules {
+  .plover-dashboard-module-list {
+    display: grid;
+    gap: vars.$spacing;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (min-width: 960px) {
+    .plover-dashboard-module-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .plover-dashboard-more-modules {
+    margin: vars.$spacing-lg auto;
+  }
+
+  .plover-dashboard-module-card {
+    border: 1px solid vars.$border-color;
+    border-radius: vars.$border-radius;
+    background-color: vars.$neutral-0;
+    overflow: hidden;
+  }
+
+  .plover-dashboard-module-footer {
+    display: flex;
+    align-items: center;
+    gap: vars.$spacing-sm;
+    padding: vars.$spacing-sm vars.$spacing;
+    background-color: vars.$neutral-50;
+  }
+
+  .plover-dashboard-module-footer {
+    border-top: 1px solid vars.$border-color;
+  }
+
+  //
+  // Module item
+  //
+  .plover-dashboard-module {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .plover-dashboard-module-panel {
+      display: flex;
+      padding: vars.$spacing;
+
+      figure {
+        flex-shrink: 0;
+        margin: 0 vars.$spacing 0 0;
+        width: 100px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .plover-dashboard-module-body {
+      flex-grow: 1;
+    }
+
+    .plover-dashboard-module-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: capitalize;
+
+      h3 {
+        font-size: 24px;
+        margin: 0;
+      }
+    }
+
+    .plover-dashboard-module-footer {
+      justify-content: flex-end;
+    }
+  }
+}
